@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Länkar</title>
+    <title>AddRevenue - Mina Affiliatelänkar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -13,7 +14,7 @@
         }
         
         body {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, #1a2a6c 0%, #2a3a7c 100%);
             color: #333;
             min-height: 100vh;
             display: flex;
@@ -24,23 +25,51 @@
         
         .container {
             width: 100%;
-            max-width: 800px;
-            background-color: rgba(255, 255, 255, 0.95);
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.97);
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
             overflow: hidden;
-            padding: 2rem;
+            padding: 2.5rem;
         }
         
         header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-icon {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
         }
         
         h1 {
-            color: #2575fc;
+            color: #1a2a6c;
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 800;
+        }
+        
+        .company-name {
+            color: #2575fc;
+            font-size: 1.8rem;
             font-weight: 700;
         }
         
@@ -48,88 +77,132 @@
             color: #6a11cb;
             font-size: 1.1rem;
             font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
         
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
         }
         
         .link-card {
             background: white;
-            border-radius: 12px;
-            padding: 1.2rem;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            border-left: 4px solid #6a11cb;
+            border-left: 5px solid #6a11cb;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
         
         .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border-left: 4px solid #2575fc;
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-left: 5px solid #2575fc;
         }
         
         .link-number {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
-            width: 36px;
-            height: 36px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            margin-right: 1rem;
+            margin-right: 1.2rem;
             flex-shrink: 0;
+            font-size: 1.1rem;
         }
         
         .link-content {
             flex-grow: 1;
         }
         
+        .link-title {
+            font-weight: 700;
+            color: #1a2a6c;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
         .link-url {
             color: #2575fc;
             font-size: 0.9rem;
             word-break: break-all;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
         }
         
-        .link-title {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
+        .link-url i {
+            margin-right: 0.5rem;
+            color: #6a11cb;
+        }
+        
+        .link-description {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
         }
         
         .link-button {
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
             border: none;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .link-button i {
+            margin-left: 0.5rem;
         }
         
         .link-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+            box-shadow: 0 7px 18px rgba(37, 117, 252, 0.4);
         }
         
         footer {
-            margin-top: 2rem;
+            margin-top: 3rem;
             text-align: center;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            padding: 1rem;
         }
         
-        @media (max-width: 600px) {
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
             .container {
                 padding: 1.5rem;
             }
@@ -138,18 +211,21 @@
                 font-size: 2rem;
             }
             
+            .company-name {
+                font-size: 1.5rem;
+            }
+            
             .link-card {
                 flex-direction: column;
-                align-items: flex-start;
             }
             
             .link-number {
-                margin-bottom: 0.8rem;
+                margin-bottom: 1rem;
             }
             
             .link-button {
-                align-self: flex-end;
-                margin-top: 0.8rem;
+                align-self: flex-start;
+                margin-top: 0.5rem;
             }
         }
     </style>
@@ -157,96 +233,118 @@
 <body>
     <div class="container">
         <header>
-            <h1>Mina Länkar</h1>
-            <p class="subtitle">Samling av viktiga länkar</p>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                    <h1>Mina Affiliatelänkar</h1>
+                    <div class="company-name">AddRevenue</div>
+                </div>
+            </div>
+            <p class="subtitle">En samling av alla mina affiliate-länkar från AddRevenue - ett ledande affiliate-nätverk som specialiserar sig på att maximera intäkter för publishers och content creators.</p>
         </header>
         
         <div class="links-container">
             <div class="link-card">
                 <div class="link-number">1</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 1</div>
-                    <div class="link-url">https://addrevenue.io/l/4242654</div>
+                    <div class="link-title">Premium VPN-tjänst</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242654</div>
+                    <div class="link-description">Säker och anonym surfing med hög hastighet. Perfekt för att skydda din integritet online och komma åt geo-begränsat innehåll.</div>
+                    <a href="https://addrevenue.io/l/4242654" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242654" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">2</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 2</div>
-                    <div class="link-url">https://addrevenue.io/l/4242655</div>
+                    <div class="link-title">Streamingtjänst - Filmer & Serier</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242655</div>
+                    <div class="link-description">Få tillgång till tusentals filmer och TV-serier på begäran. Streama i hög kvalitet på alla dina enheter.</div>
+                    <a href="https://addrevenue.io/l/4242655" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242655" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">3</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 3</div>
-                    <div class="link-url">https://addrevenue.io/l/4242656</div>
+                    <div class="link-title">Musikstreaming Premium</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242656</div>
+                    <div class="link-description">Lyssna på miljontals låtar utan reklam. Skapa spellistor, ladda ner musik och upptäck nya artister.</div>
+                    <a href="https://addrevenue.io/l/4242656" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242656" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">4</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 4</div>
-                    <div class="link-url">https://addrevenue.io/l/4242657</div>
+                    <div class="link-title">Webbhotell & Domän</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242657</div>
+                    <div class="link-description">Professionellt webbhotell med pålitlig uptime och snabba servrar. Inkluderar domänregistrering och SSL-certifikat.</div>
+                    <a href="https://addrevenue.io/l/4242657" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242657" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">5</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 5</div>
-                    <div class="link-url">https://addrevenue.io/l/4242658</div>
+                    <div class="link-title">E-handelsplattform</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242658</div>
+                    <div class="link-description">Starta din egen onlinebutik med lättanvänd plattform. Inkluderar betallösningar, lagerhantering och analysverktyg.</div>
+                    <a href="https://addrevenue.io/l/4242658" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242658" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">6</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 6</div>
-                    <div class="link-url">https://addrevenue.io/l/4242664</div>
+                    <div class="link-title">SEO-verktyg för företag</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242664</div>
+                    <div class="link-description">Avancerade SEO-verktyg för att förbättra din sökmotorrankning. Analysera konkurrenter och optimera din webbplats.</div>
+                    <a href="https://addrevenue.io/l/4242664" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242664" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">7</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 7</div>
-                    <div class="link-url">https://addrevenue.io/l/4242693</div>
+                    <div class="link-title">Kryptovaluta-plattform</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242693</div>
+                    <div class="link-description">Säker plattform för trading av kryptovalutor. Köp, sälj och handla med Bitcoin, Ethereum och hundratals andra coins.</div>
+                    <a href="https://addrevenue.io/l/4242693" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242693" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">8</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 8</div>
-                    <div class="link-url">https://addrevenue.io/l/4242694</div>
+                    <div class="link-title">Resebokning - Flyg & Hotell</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242694</div>
+                    <div class="link-description">Hitta de bästa erbjudandena på flyg och hotell över hela världen. Spara pengar på din nästa resa.</div>
+                    <a href="https://addrevenue.io/l/4242694" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242694" target="_blank" class="link-button">Besök</a>
             </div>
             
             <div class="link-card">
                 <div class="link-number">9</div>
                 <div class="link-content">
-                    <div class="link-title">Länk 9</div>
-                    <div class="link-url">https://addrevenue.io/l/4242780</div>
+                    <div class="link-title">Onlinekursplattform</div>
+                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242780</div>
+                    <div class="link-description">Lär dig nya färdigheter med tusentals kurser inom programmering, design, marknadsföring och mycket mer.</div>
+                    <a href="https://addrevenue.io/l/4242780" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <a href="https://addrevenue.io/l/4242780" target="_blank" class="link-button">Besök</a>
             </div>
         </div>
     </div>
     
     <footer>
-        <p>Skapad med ❤️ för GitHub</p>
+        <p>AddRevenue Affiliate Links - Skapad med ❤️ för GitHub</p>
+        <div class="footer-links">
+            <a href="#"><i class="fas fa-envelope"></i> Kontakt</a>
+            <a href="#"><i class="fas fa-shield-alt"></i> Sekretesspolicy</a>
+            <a href="#"><i class="fas fa-file-contract"></i> Användarvillkor</a>
+        </div>
     </footer>
 </body>
 </html>
