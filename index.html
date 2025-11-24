@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AddRevenue - Mina Affiliatelänkar</title>
+    <title>Mina Affiliatelänkar - AddRevenue</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -13,24 +13,37 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
+        :root {
+            --primary: #4a6cf7;
+            --primary-dark: #3a5ce5;
+            --secondary: #6a11cb;
+            --accent: #00c9ff;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #28a745;
+        }
+        
         body {
             background: linear-gradient(135deg, #1a2a6c 0%, #2a3a7c 100%);
-            color: #333;
+            color: var(--dark);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 2rem 1rem;
+            line-height: 1.6;
         }
         
         .container {
             width: 100%;
-            max-width: 900px;
+            max-width: 1100px;
             background-color: rgba(255, 255, 255, 0.97);
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
             overflow: hidden;
             padding: 2.5rem;
+            margin-bottom: 2rem;
         }
         
         header {
@@ -44,69 +57,102 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
         
         .logo-icon {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-right: 1rem;
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
         }
         
         h1 {
-            color: #1a2a6c;
-            font-size: 2.5rem;
+            color: var(--primary);
+            font-size: 2.8rem;
             margin-bottom: 0.5rem;
             font-weight: 800;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         }
         
         .company-name {
-            color: #2575fc;
+            color: var(--secondary);
             font-size: 1.8rem;
             font-weight: 700;
+            margin-bottom: 1rem;
         }
         
         .subtitle {
-            color: #6a11cb;
-            font-size: 1.1rem;
+            color: var(--gray);
+            font-size: 1.2rem;
             font-weight: 500;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.6;
         }
         
+        .addrevenue-link {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
+        }
+        
+        .addrevenue-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(106, 17, 203, 0.4);
+        }
+        
+        .addrevenue-link i {
+            margin-right: 0.5rem;
+        }
+        
         .links-container {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
             gap: 1.5rem;
         }
         
         .link-card {
             background: white;
             border-radius: 15px;
-            padding: 1.5rem;
+            padding: 1.8rem;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            border-left: 5px solid #6a11cb;
+            border-left: 5px solid var(--secondary);
             display: flex;
-            align-items: flex-start;
+            flex-direction: column;
+            height: 100%;
         }
         
         .link-card:hover {
             transform: translateY(-7px);
             box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-            border-left: 5px solid #2575fc;
+            border-left: 5px solid var(--primary);
+        }
+        
+        .link-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
         }
         
         .link-number {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
             width: 40px;
             height: 40px;
@@ -118,42 +164,41 @@
             margin-right: 1.2rem;
             flex-shrink: 0;
             font-size: 1.1rem;
-        }
-        
-        .link-content {
-            flex-grow: 1;
+            box-shadow: 0 3px 10px rgba(106, 17, 203, 0.3);
         }
         
         .link-title {
             font-weight: 700;
-            color: #1a2a6c;
+            color: var(--primary);
             margin-bottom: 0.5rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            line-height: 1.3;
         }
         
         .link-url {
-            color: #2575fc;
+            color: var(--gray);
             font-size: 0.9rem;
             word-break: break-all;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
         }
         
         .link-url i {
             margin-right: 0.5rem;
-            color: #6a11cb;
+            color: var(--secondary);
         }
         
         .link-description {
             color: #555;
             line-height: 1.6;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
             font-size: 0.95rem;
         }
         
         .link-button {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
             color: white;
             border: none;
             padding: 0.8rem 1.5rem;
@@ -166,6 +211,8 @@
             align-items: center;
             justify-content: center;
             font-size: 1rem;
+            align-self: flex-start;
+            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
         }
         
         .link-button i {
@@ -178,11 +225,13 @@
         }
         
         footer {
-            margin-top: 3rem;
+            margin-top: 2rem;
             text-align: center;
             color: rgba(255, 255, 255, 0.85);
             font-size: 0.95rem;
-            padding: 1rem;
+            padding: 1.5rem;
+            width: 100%;
+            max-width: 1100px;
         }
         
         .footer-links {
@@ -196,6 +245,12 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 0.5rem;
         }
         
         .footer-links a:hover {
@@ -208,24 +263,34 @@
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .company-name {
                 font-size: 1.5rem;
             }
             
+            .links-container {
+                grid-template-columns: 1fr;
+            }
+            
             .link-card {
+                padding: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .link-header {
                 flex-direction: column;
             }
             
             .link-number {
                 margin-bottom: 1rem;
-            }
-            
-            .link-button {
-                align-self: flex-start;
-                margin-top: 0.5rem;
             }
         }
     </style>
@@ -239,101 +304,140 @@
                 </div>
                 <div>
                     <h1>Mina Affiliatelänkar</h1>
-                    <div class="company-name">AddRevenue</div>
+                    <div class="company-name">AddRevenue Partners</div>
                 </div>
             </div>
             <p class="subtitle">En samling av alla mina affiliate-länkar från AddRevenue - ett ledande affiliate-nätverk som specialiserar sig på att maximera intäkter för publishers och content creators.</p>
+            <a href="https://addrevenue.io/t?a=984405&c=3466092" target="_blank" class="addrevenue-link">
+                <i class="fas fa-external-link-alt"></i> Besök AddRevenue
+            </a>
         </header>
         
         <div class="links-container">
             <div class="link-card">
-                <div class="link-number">1</div>
-                <div class="link-content">
-                    <div class="link-title">Premium VPN-tjänst</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242654</div>
-                    <div class="link-description">Säker och anonym surfing med hög hastighet. Perfekt för att skydda din integritet online och komma åt geo-begränsat innehåll.</div>
-                    <a href="https://addrevenue.io/l/4242654" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">1</div>
+                    <div>
+                        <div class="link-title">Alwy - Bankjämförelse</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242654</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Alwy hjälper dig att jämföra banker och göra smarta val för din ekonomi. Med mångårig erfarenhet inom bank & finans, dataanalys, AI och mjukvaruutveckling skapar de tjänster som hjälper dig med helheten i din ekonomi. Få mer pengar att göra det du tycker om - spara mer eller åka på semester.
+                </div>
+                <a href="https://addrevenue.io/l/4242654" target="_blank" class="link-button">Besök Alwy <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">2</div>
-                <div class="link-content">
-                    <div class="link-title">Streamingtjänst - Filmer & Serier</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242655</div>
-                    <div class="link-description">Få tillgång till tusentals filmer och TV-serier på begäran. Streama i hög kvalitet på alla dina enheter.</div>
-                    <a href="https://addrevenue.io/l/4242655" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">2</div>
+                    <div>
+                        <div class="link-title">Compari.se - Låneförmedling</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242655</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Compari.se hjälper dig att hitta det rätta lånet bland 40 banker och långivare. Med en enkel ansökan kan du jämföra flera erbjudanden kostnadsfritt och icke-bindande. Om du behöver ett lån på upp till 600 000 kr kan ett privatlån vara rätt låneform för dig, eller om du vill samla dina lån för bättre översikt och villkor.
+                </div>
+                <a href="https://addrevenue.io/l/4242655" target="_blank" class="link-button">Besök Compari.se <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">3</div>
-                <div class="link-content">
-                    <div class="link-title">Musikstreaming Premium</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242656</div>
-                    <div class="link-description">Lyssna på miljontals låtar utan reklam. Skapa spellistor, ladda ner musik och upptäck nya artister.</div>
-                    <a href="https://addrevenue.io/l/4242656" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">3</div>
+                    <div>
+                        <div class="link-title">Estateguru - Fastighetsinvestering</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242656</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Estateguru är Europas ledande plattform för fastighetsfinansiering och investeringar. De har faciliterat över 3,838 lån värda mer än €596 miljoner och hjälpt över 135,000 investerare. Deras team av erfarna fastighetsexperter stödjer låntagare och säkerställer att endast de bästa projekten väljs för investerare.
+                </div>
+                <a href="https://addrevenue.io/l/4242656" target="_blank" class="link-button">Besök Estateguru <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">4</div>
-                <div class="link-content">
-                    <div class="link-title">Webbhotell & Domän</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242657</div>
-                    <div class="link-description">Professionellt webbhotell med pålitlig uptime och snabba servrar. Inkluderar domänregistrering och SSL-certifikat.</div>
-                    <a href="https://addrevenue.io/l/4242657" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">4</div>
+                    <div>
+                        <div class="link-title">Lendella - Privatlån</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242657</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Lendella erbjuder kostnadsfri låneansökan för lån upp till 600 000 kr via upp till 40 olika långivare och banker. Med endast en UC-kontroll kan du ansöka om privatlån eller samlingslån. Lendella samarbetar med Sambla och erbjuder lån med räntor från 3,06% till 29,99% utan uppläggningsavgift.
+                </div>
+                <a href="https://addrevenue.io/l/4242657" target="_blank" class="link-button">Besök Lendella <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">5</div>
-                <div class="link-content">
-                    <div class="link-title">E-handelsplattform</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242658</div>
-                    <div class="link-description">Starta din egen onlinebutik med lättanvänd plattform. Inkluderar betallösningar, lagerhantering och analysverktyg.</div>
-                    <a href="https://addrevenue.io/l/4242658" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">5</div>
+                    <div>
+                        <div class="link-title">Samly - Samlingslån</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242658</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Samly hjälper dig att samla lån och krediter för att sänka din månadskostnad. Med en kostnadsfri låneansökan via upp till 40 långivare kan du få lån på 5 000 - 600 000 kr med återbetalningstid på 1-20 år. Samly samarbetar med Sambla och kräver endast en UC-kontroll för ansökan.
+                </div>
+                <a href="https://addrevenue.io/l/4242658" target="_blank" class="link-button">Besök Samly <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">6</div>
-                <div class="link-content">
-                    <div class="link-title">SEO-verktyg för företag</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242664</div>
-                    <div class="link-description">Avancerade SEO-verktyg för att förbättra din sökmotorrankning. Analysera konkurrenter och optimera din webbplats.</div>
-                    <a href="https://addrevenue.io/l/4242664" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">6</div>
+                    <div>
+                        <div class="link-title">Fårskinn & Inredning</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242664</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Här hittar du exklusiva fårskinn och fårskinnsprodukter av högsta kvalitet. Sortimentet inkluderar fårskinn från Nya Zeeland, Island, Tibet och andra länder. Alla produkter är handplockade för att säkerställa mjuk och lyxig känsla. Företaget lägger stor vikt vid hållbarhet och kvalitet med certifierade och hållbart framställda produkter.
+                </div>
+                <a href="https://addrevenue.io/l/4242664" target="_blank" class="link-button">Besök butiken <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">7</div>
-                <div class="link-content">
-                    <div class="link-title">Kryptovaluta-plattform</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242693</div>
-                    <div class="link-description">Säker plattform för trading av kryptovalutor. Köp, sälj och handla med Bitcoin, Ethereum och hundratals andra coins.</div>
-                    <a href="https://addrevenue.io/l/4242693" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">7</div>
+                    <div>
+                        <div class="link-title">JustInCase - Livförsäkring</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242693</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    JustInCase är Sveriges specialist på livförsäkring. De erbjuder två produkter: Grundskydd (500 000 kr utan hälsofrågor) och individuell livförsäkring (1-6 miljoner kr med fem hälsofrågor). Livförsäkringen hjälper din familj att klara ekonomin om du avlider och är särskilt viktig för dig med barn eller bolån.
+                </div>
+                <a href="https://addrevenue.io/l/4242693" target="_blank" class="link-button">Besök JustInCase <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">8</div>
-                <div class="link-content">
-                    <div class="link-title">Resebokning - Flyg & Hotell</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242694</div>
-                    <div class="link-description">Hitta de bästa erbjudandena på flyg och hotell över hela världen. Spara pengar på din nästa resa.</div>
-                    <a href="https://addrevenue.io/l/4242694" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">8</div>
+                    <div>
+                        <div class="link-title">Jascha Stockholm - Mode</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242694</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Jascha Stockholm är ett modernt modevarumärke grundat 2001 av Creative Director Jascha Trygg. Varumärket erbjuder en lekfull tolkning av skandinavisk mode med fokus på högkvalitativ, hållbar fashion som är gjord för att vara långvarig. Idag drivs företaget av bröderna Jascha, Jonas och Marc som delar en passion för musik, resor, mat och företagande.
+                </div>
+                <a href="https://addrevenue.io/l/4242694" target="_blank" class="link-button">Besök Jascha Stockholm <i class="fas fa-external-link-alt"></i></a>
             </div>
             
             <div class="link-card">
-                <div class="link-number">9</div>
-                <div class="link-content">
-                    <div class="link-title">Onlinekursplattform</div>
-                    <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242780</div>
-                    <div class="link-description">Lär dig nya färdigheter med tusentals kurser inom programmering, design, marknadsföring och mycket mer.</div>
-                    <a href="https://addrevenue.io/l/4242780" target="_blank" class="link-button">Besök länk <i class="fas fa-external-link-alt"></i></a>
+                <div class="link-header">
+                    <div class="link-number">9</div>
+                    <div>
+                        <div class="link-title">Bivaxdukar - Miljövänlig matförvaring</div>
+                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242780</div>
+                    </div>
                 </div>
+                <div class="link-description">
+                    Upptäck miljövänliga bivaxdukar som ersätter plastfolie för matförvaring. Dukarna är återanvändbara över 400 gånger, håller maten fräsch längre och är både praktiska och dekorativa. Med hjälp av händernas värme kan du forma duken efter behov för att täcka pajformar, karaffer, skålar, glas, bröd, ost, frukt och grönsaker.
+                </div>
+                <a href="https://addrevenue.io/l/4242780" target="_blank" class="link-button">Besök butiken <i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
     </div>
