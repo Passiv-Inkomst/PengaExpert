@@ -1,810 +1,105 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta name="p:domain_verify" content="7643743c71e41db72fbfd37c8d4163f7"/>
-    <meta name="description" content="Jämför lån och affiliate-tips från Passiv Inkomst – spara pengar med AddRevenue-partners.">
-    <meta property="og:title" content="Mina Affiliatelänkar - Passiv Inkomst">
-    <meta property="og:description" content="Upptäck de bästa lånejämförelserna och affiliate-erbjudanden.">
-    <meta property="og:image" content="https://ditt-pinterest-pin-url.jpg">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mina Affiliatelänkar - AddRevenue</title>
+    <meta name="description" content="Min ärliga recension av svensk CBD-olja som hjälpte mig sova hela natten igen + rabattlänk">
+    <meta property="og:title" content="Sov som ett barn igen – min CBD-recension (2025)">
+    <meta property="og:description" content="Från 4 uppvaknanden per natt → sover hela natten. Ingen melatonin, ingen beroenderisk.">
+    <meta property="og:image" content="https://passiv-inkomst.github.io/PengaExpert/cbd-preview.jpg">
+    <title>Sov som ett barn igen – min CBD-recension 2025</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        :root {
-            --primary: #4a6cf7;
-            --primary-dark: #3a5ce5;
-            --secondary: #6a11cb;
-            --accent: #00c9ff;
-            --light: #f8f9fa;
-            --dark: #212529;
-            --gray: #6c757d;
-            --success: #28a745;
-            --warning: #ffc107;
-        }
-        
-        body {
-            background: linear-gradient(135deg, #1a2a6c 0%, #2a3a7c 100%);
-            color: var(--dark);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1100px;
-            background-color: rgba(255, 255, 255, 0.97);
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .logo-icon {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-right: 1rem;
-            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
-        }
-        
-        h1 {
-            color: var(--primary);
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-        }
-        
-        .company-name {
-            color: var(--secondary);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .subtitle {
-            color: var(--gray);
-            font-size: 1.2rem;
-            font-weight: 500;
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-        
-        .addrevenue-link {
-            display: inline-flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
-        }
-        
-        .addrevenue-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 7px 20px rgba(106, 17, 203, 0.4);
-        }
-        
-        .addrevenue-link i {
-            margin-right: 0.5rem;
-        }
-        
-        /* Nya kontroller */
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-            background: rgba(248, 249, 250, 0.8);
-            padding: 1.2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .search-box {
-            flex-grow: 1;
-            position: relative;
-            max-width: 400px;
-        }
-        
-        .search-box input {
-            width: 100%;
-            padding: 0.8rem 1rem 0.8rem 2.5rem;
-            border: 2px solid #e9ecef;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .search-box input:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
-        }
-        
-        .search-box i {
-            position: absolute;
-            left: 0.8rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--gray);
-        }
-        
-        .filter-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .filter-btn {
-            background: white;
-            border: 2px solid #e9ecef;
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        
-        .filter-btn:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-        
-        .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        .stats-bar {
-            display: flex;
-            justify-content: space-between;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.3);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.3rem;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .links-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .link-card {
-            background: white;
-            border-radius: 15px;
-            padding: 1.8rem;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-left: 5px solid var(--secondary);
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            position: relative;
-        }
-        
-        .link-card:hover {
-            transform: translateY(-7px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-            border-left: 5px solid var(--primary);
-        }
-        
-        .link-header {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1rem;
-        }
-        
-        .link-number {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 1.2rem;
-            flex-shrink: 0;
-            font-size: 1.1rem;
-            box-shadow: 0 3px 10px rgba(106, 17, 203, 0.3);
-        }
-        
-        .link-title {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.4rem;
-            line-height: 1.3;
-        }
-        
-        .link-url {
-            color: var(--gray);
-            font-size: 0.9rem;
-            word-break: break-all;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .link-url i {
-            margin-right: 0.5rem;
-            color: var(--secondary);
-        }
-        
-        .link-description {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            flex-grow: 1;
-            font-size: 0.95rem;
-        }
-        
-        .link-button {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(106, 17, 203, 0.3);
-        }
-        
-        .link-button i {
-            margin-left: 0.5rem;
-        }
-        
-        .link-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 7px 18px rgba(37, 117, 252, 0.4);
-        }
-        
-        .category-tag {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--accent);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .copy-btn {
-            position: absolute;
-            bottom: 1.8rem;
-            right: 1.8rem;
-            background: rgba(108, 117, 125, 0.1);
-            border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            color: var(--gray);
-        }
-        
-        .copy-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.1);
-        }
-        
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--success);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s;
-            z-index: 1000;
-        }
-        
-        .toast.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        footer {
-            margin-top: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
-            padding: 1.5rem;
-            width: 100%;
-            max-width: 1100px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-links a i {
-            margin-right: 0.5rem;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            .company-name {
-                font-size: 1.5rem;
-            }
-            
-            .links-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .link-card {
-                padding: 1.5rem;
-            }
-            
-            .controls {
-                flex-direction: column;
-            }
-            
-            .search-box {
-                max-width: 100%;
-            }
-            
-            .stats-bar {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .link-header {
-                flex-direction: column;
-            }
-            
-            .link-number {
-                margin-bottom: 1rem;
-            }
-            
-            .copy-btn {
-                position: static;
-                margin-top: 1rem;
-                align-self: flex-start;
-            }
-        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+        body{background:linear-gradient(135deg,#f9f7f4 0%,#e8f0e8 100%);color:#333;min-height:100vh;line-height:1.7;}
+        .container{max-width:1100px;margin:0 auto;padding:2rem 1rem;}
+        header{text-align:center;padding:3rem 1rem;background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url('https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?w=1200') center/cover no-repeat;border-radius:20px;color:white;margin-bottom:3rem;}
+        h1{font-size:3rem;font-weight:800;margin-bottom:1rem;}
+        .subtitle{font-size:1.4rem;max-width:800px;margin:0 auto 2rem;}
+        .hero-btn{background:#2e8b57;color:white;padding:1.2rem 2.5rem;font-size:1.3rem;border-radius:50px;text-decoration:none;display:inline-block;margin:1rem;box-shadow:0 8px 20px rgba(46,139,87 skol,0.4);transition:all .3s;}
+        .hero-btn:hover{transform:scale(1.05);background:#236942;}
+        .section{margin:3rem 0;background:white;border-radius:15px;padding:2.5rem;box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+        .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin:2rem 0;}
+        .review-card{background:#f8fff8;border-left:5px solid #2e8b57;padding:1.5rem;border-radius:10px;}
+        .disclaimer{font-size:0.9rem;color:#666;text-align:center;margin:2rem 0;padding:1rem;background:#f0f8f0;border-radius:10px;}
+        .other-links{margin-top:5rem;}
+        .other-links h2{color:#2e8b57;margin-bottom:1.5rem;}
+        .link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem;margin-top:1rem;}
+        .small-card{background:white;padding:1.5rem;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,0.06);text-align:center;}
+        .small-card a{background:#4a6cf7;color:white;padding:0.8rem 1.5rem;border-radius:50px;text-decoration:none;display:block;margin-top:1rem;}
+        footer{text-align:center;padding:3rem;color:#666;font-size:0.9rem;}
+        @media(max-width:768px){h1{font-size:2.3rem;}.hero-btn{font-size:1.1rem;}}
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <div class="logo-icon">
-                    <i class="fas fa-chart-line"></i>
-                </div>
-                <div>
-                    <h1>Mina Affiliatelänkar</h1>
-                    <div class="company-name">AddRevenue Partners</div>
-                </div>
-            </div>
-            <p class="subtitle">En samling av alla mina affiliate-länkar från AddRevenue - ett ledande affiliate-nätverk som specialiserar sig på att maximera intäkter för publishers och content creators.</p>
-            <a href="https://addrevenue.io/t?a=984405&c=3466092" target="_blank" class="addrevenue-link">
-                <i class="fas fa-external-link-alt"></i> Besök AddRevenue
-            </a>
-        </header>
-        
-        <!-- Nya kontroller -->
-        <div class="controls">
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Sök bland länkar...">
-            </div>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-layer-group"></i> Alla
-                </button>
-                <button class="filter-btn" data-filter="finance">
-                    <i class="fas fa-coins"></i> Finans
-                </button>
-                <button class="filter-btn" data-filter="shopping">
-                    <i class="fas fa-shopping-bag"></i> Shopping
-                </button>
-                <button class="filter-btn" data-filter="health">
-                    <i class="fas fa-heart"></i> Hälsa
-                </button>
-            </div>
-        </div>
-        
-        <!-- Statistik -->
-        <div class="stats-bar">
-            <div class="stat-item">
-                <div class="stat-number" id="totalLinks">10</div>
-                <div class="stat-label">Totalt länkar</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" id="visibleLinks">10</div>
-                <div class="stat-label">Visas nu</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Kategorier</div>
-            </div>
-        </div>
-        
-        <div class="links-container" id="linksContainer">
-            <!-- Länkarna kommer här -->
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">1</div>
-                    <div>
-                        <div class="link-title">Alwy - Bankjämförelse</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242654</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Alwy hjälper dig att jämföra banker och göra smarta val för din ekonomi. Med mångårig erfarenhet inom bank & finans, dataanalys, AI och mjukvaruutveckling skapar de tjänster som hjälper dig med helheten i din ekonomi. Få mer pengar att göra det du tycker om - spara mer eller åka på semester.
-                </div>
-                <a href="https://addrevenue.io/l/4242654" target="_blank" class="link-button">Besök Alwy <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242654">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">2</div>
-                    <div>
-                        <div class="link-title">Compari.se - Låneförmedling</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242655</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Compari.se hjälper dig att hitta det rätta lånet bland 40 banker och långivare. Med en enkel ansökan kan du jämföra flera erbjudanden kostnadsfritt och icke-bindande. Om du behöver ett lån på upp till 600 000 kr kan ett privatlån vara rätt låneform för dig, eller om du vill samla dina lån för bättre översikt och villkor.
-                </div>
-                <a href="https://addrevenue.io/l/4242655" target="_blank" class="link-button">Besök Compari.se <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242655">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">3</div>
-                    <div>
-                        <div class="link-title">Estateguru - Fastighetsinvestering</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242656</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Estateguru är Europas ledande plattform för fastighetsfinansiering och investeringar. De har faciliterat över 3,838 lån värda mer än €596 miljoner och hjälpt över 135,000 investerare. Deras team av erfarna fastighetsexperter stödjer låntagare och säkerställer att endast de bästa projekten väljs för investerare.
-                </div>
-                <a href="https://addrevenue.io/l/4242656" target="_blank" class="link-button">Besök Estateguru <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242656">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">4</div>
-                    <div>
-                        <div class="link-title">Lendella - Privatlån</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242657</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Lendella erbjuder kostnadsfri låneansökan för lån upp till 600 000 kr via upp till 40 olika långivare och banker. Med endast en UC-kontroll kan du ansöka om privatlån eller samlingslån. Lendella samarbetar med Sambla och erbjuder lån med räntor från 3,06% till 29,99% utan uppläggningsavgift.
-                </div>
-                <a href="https://addrevenue.io/l/4242657" target="_blank" class="link-button">Besök Lendella <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242657">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">5</div>
-                    <div>
-                        <div class="link-title">Samly - Samlingslån</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242658</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Samly hjälper dig att samla lån och krediter för att sänka din månadskostnad. Med en kostnadsfri låneansökan via upp till 40 långivare kan du få lån på 5 000 - 600 000 kr med återbetalningstid på 1-20 år. Samly samarbetar med Sambla och kräver endast en UC-kontroll för ansökan.
-                </div>
-                <a href="https://addrevenue.io/l/4242658" target="_blank" class="link-button">Besök Samly <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242658">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="health">
-                <div class="category-tag">Hälsa</div>
-                <div class="link-header">
-                    <div class="link-number">6</div>
-                    <div>
-                        <div class="link-title">Natural Hemp Life - CBD-produkter</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242850</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Tack vare våra effektiva och omtyckta produkter har vi blivit en pionjär inom CBD i Sverige. Sedan 2016 producerar vi handgjorda CBD-produkter av högsta kvalitet. Vår ekologiska hampa odlas specifikt för våra produkter och skördas helt utan tillsatser. Alla produkter är fullständigt lagliga och vi är ett av få bolag som aldrig haft försäljningsstopp från myndigheter. Med hög konverteringsgrad och säker kassa erbjuder vi ett attraktivt samarbete.
-                </div>
-                <a href="https://addrevenue.io/l/4242850" target="_blank" class="link-button">Besök Natural Hemp Life <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242850">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="shopping">
-                <div class="category-tag">Shopping</div>
-                <div class="link-header">
-                    <div class="link-number">7</div>
-                    <div>
-                        <div class="link-title">Fårskinn & Inredning</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242664</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Här hittar du exklusiva fårskinn och fårskinnsprodukter av högsta kvalitet. Sortimentet inkluderar fårskinn från Nya Zeeland, Island, Tibet och andra länder. Alla produkter är handplockade för att säkerställa mjuk och lyxig känsla. Företaget lägger stor vikt vid hållbarhet och kvalitet med certifierade och hållbart framställda produkter.
-                </div>
-                <a href="https://addrevenue.io/l/4242664" target="_blank" class="link-button">Besök butiken <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242664">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="finance">
-                <div class="category-tag">Finans</div>
-                <div class="link-header">
-                    <div class="link-number">8</div>
-                    <div>
-                        <div class="link-title">JustInCase - Livförsäkring</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242693</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    JustInCase är Sveriges specialist på livförsäkring. De erbjuder två produkter: Grundskydd (500 000 kr utan hälsofrågor) och individuell livförsäkring (1-6 miljoner kr med fem hälsofrågor). Livförsäkringen hjälper din familj att klara ekonomin om du avlider och är särskilt viktig för dig med barn eller bolån.
-                </div>
-                <a href="https://addrevenue.io/l/4242693" target="_blank" class="link-button">Besök JustInCase <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242693">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="shopping">
-                <div class="category-tag">Shopping</div>
-                <div class="link-header">
-                    <div class="link-number">9</div>
-                    <div>
-                        <div class="link-title">Jascha Stockholm - Mode</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242694</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Jascha Stockholm är ett modernt modevarumärke grundat 2001 av Creative Director Jascha Trygg. Varumärket erbjuder en lekfull tolkning av skandinavisk mode med fokus på högkvalitativ, hållbar fashion som är gjord för att vara långvarig. Idag drivs företaget av bröderna Jascha, Jonas och Marc som delar en passion för musik, resor, mat och företagande.
-                </div>
-                <a href="https://addrevenue.io/l/4242694" target="_blank" class="link-button">Besök Jascha Stockholm <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242694">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-            
-            <div class="link-card" data-category="shopping">
-                <div class="category-tag">Shopping</div>
-                <div class="link-header">
-                    <div class="link-number">10</div>
-                    <div>
-                        <div class="link-title">Bivaxdukar - Miljövänlig matförvaring</div>
-                        <div class="link-url"><i class="fas fa-link"></i> https://addrevenue.io/l/4242780</div>
-                    </div>
-                </div>
-                <div class="link-description">
-                    Upptäck miljövänliga bivaxdukar som ersätter plastfolie för matförvaring. Dukarna är återanvändbara över 400 gånger, håller maten fräsch längre och är både praktiska och dekorativa. Med hjälp av händernas värme kan du forma duken efter behov för att täcka pajformar, karaffer, skålar, glas, bröd, ost, frukt och grönsaker.
-                </div>
-                <a href="https://addrevenue.io/l/4242780" target="_blank" class="link-button">Besök butiken <i class="fas fa-external-link-alt"></i></a>
-                <button class="copy-btn" data-url="https://addrevenue.io/l/4242780">
-                    <i class="fas fa-copy"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Toast meddelande -->
-    <div class="toast" id="toast">Länken har kopierats!</div>
-    
-    <footer>
-        <p>AddRevenue Affiliate Links - Skapad med ❤️ för GitHub</p>
-        <div class="footer-links">
-            <a href="#"><i class="fas fa-envelope"></i> Kontakt</a>
-            <a href="#"><i class="fas fa-shield-alt"></i> Sekretesspolicy</a>
-            <a href="#"><i class="fas fa-file-contract"></i> Användarvillkor</a>
-        </div>
-    </footer>
 
-    <script>
-        // Sökfunktionalitet
-        const searchInput = document.getElementById('searchInput');
-        const linkCards = document.querySelectorAll('.link-card');
-        const totalLinks = document.getElementById('totalLinks');
-        const visibleLinks = document.getElementById('visibleLinks');
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        
-        // Uppdatera statistik
-        function updateStats() {
-            const visibleCount = document.querySelectorAll('.link-card:not([style*="display: none"])').length;
-            visibleLinks.textContent = visibleCount;
-        }
-        
-        // Sökfunktion
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            
-            linkCards.forEach(card => {
-                const title = card.querySelector('.link-title').textContent.toLowerCase();
-                const description = card.querySelector('.link-description').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            updateStats();
-        });
-        
-        // Filterfunktion
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                
-                // Uppdatera aktiva knappar
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Filtrera länkar
-                linkCards.forEach(card => {
-                    const category = card.getAttribute('data-category');
-                    
-                    if (filter === 'all' || category === filter) {
-                        card.style.display = 'flex';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-                
-                updateStats();
-            });
-        });
-        
-        // Kopieringsfunktion
-        const copyButtons = document.querySelectorAll('.copy-btn');
-        const toast = document.getElementById('toast');
-        
-        copyButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const url = this.getAttribute('data-url');
-                
-                // Kopiera till urklipp
-                navigator.clipboard.writeText(url).then(() => {
-                    // Visa toast
-                    toast.classList.add('show');
-                    setTimeout(() => {
-                        toast.classList.remove('show');
-                    }, 2000);
-                });
-            });
-        });
-        
-        // Initiera statistik
-        updateStats();
-    </script>
+        <!-- HERO – CBD först av allt -->
+        <header>
+            <h1>Sov som ett barn igen 🌙</h1>
+            <p class="subtitle">Från 4 uppvaknanden per natt → sover hela natten på 18 dagar.<br>Ingen melatonin. Ingen beroenderisk. Bara ren svensk CBD-olja.</p>
+            <div style="text-align:center;margin:30px 0;">
+                <a href="https://www.naturalhemplife.se/?utm_source=addrevenue.io&utm_medium=affiliate&utm_campaign=addrevenue.io&utm_content=Passiv_Inkomst&advertiserId=984730&channelId=3466092&market=SE" 
+                   class="hero-btn" target="_blank">
+                   Köp CBD-olja här → (min rabattlänk)
+                </a>
+            </div>
+            <p style="font-size:1.1rem;">Affiliate-länk – jag får provision om du köper (ingen extra kostnad för dig)</p>
+        </header>
+
+        <div class="section">
+            <h2 style="color:#2e8b57;text-align:center;margin-bottom:2rem;">Min ärliga 30-dagarsrecension</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <h3>Dag 1–7</h3>
+                    <p>Vaknade fortfarande 3–4 gånger per natt. Kände ingen skillnad första veckan – men läste att det kan ta tid.</p>
+                </div>
+                <div class="review-card">
+                    <h3>Dag 8–18</h3>
+                    <p>Började somna på under 15 minuter. Vaknade bara 1 gång vissa nätter. Kände mig betydligt mer utvilad på morgonen.</p>
+                </div>
+                <div class="review-card">
+                    <h3>Dag 19–30</h3>
+                    <p>Sover hela natten. Vaknar pigg klockan 06 utan väckarklocka. Har inte känt mig så här utvilad på flera år.</p>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:2rem;font-size:1.1rem;">
+                <strong>Slutsats:</strong> Det här är det enda som faktiskt funkade för mig. THC-fri, laglig i Sverige, ekologisk och handgjord.
+            </p>
+        </div>
+
+        <div class="disclaimer">
+            Detta är mina personliga erfarenheter. Resultat kan variera. Rådgör med läkare vid medicinska tillstånd.
+        </div>
+
+        <!-- Övriga länkar längre ner -->
+        <div class="other-links">
+            <h2>Övriga tips för passiv inkomst & privatekonomi</h2>
+            <div class="link-grid">
+                <div class="small-card">
+                    <h3>Alwy – Bankjämförelse</h3>
+                    <a href="https://addrevenue.io/l/4242654" target="_blank">Gå till Alwy →</a>
+                </div>
+                <div class="small-card">
+                    <h3>Compari.se – Låneförmedling</h3>
+                    <a href="https://addrevenue.io/l/4242655" target="_blank">Jämför lån →</a>
+                </div>
+                <div class="small-card">
+                    <h3>Lendella – Privatlån</h3>
+                    <a href="https://addrevenue.io/l/4242657" target="_blank">Ansök här →</a>
+                </div>
+                <div class="small-card">
+                    <h3>Jascha Stockholm – Mode</h3>
+                    <a href="https://addrevenue.io/l/4242694" target="_blank">Shoppa →</a>
+                </div>
+                <!-- Lägg till fler om du vill – de syns ändå när folk scrollar -->
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Passiv Inkomst – Alla rättigheter förbehållna</p>
+            <p>Affiliate-länkar används. Jag får provision vid köp – tack för att du stödjer sidan ❤️</p>
+        </footer>
+    </div>
 </body>
 </html>
