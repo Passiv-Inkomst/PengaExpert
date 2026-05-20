@@ -1,142 +1,813 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Min ärliga recension av svensk CBD-olja för bättre sömn samt expertguider inom privatekonomi via BudgetDoktorn 2026.">
-    <meta property="og:title" content="Sömn, hälsa & ekonomi – Mina bästa tips 2026">
-    <meta property="og:description" content="Från sömnproblem till ekonomisk trygghet. Läs min CBD-recension och besök BudgetDoktorn.">
-    <title>Sömn & Ekonomi – Min Personliga Guide 2026</title>
-    <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
-        body{background:linear-gradient(135deg,#f8f9f5 0%,#e8f5e8 100%);color:#333;line-height:1.7;}
-        .container{max-width:1100px;margin:0 auto;padding:2rem 1rem;}
-        
-        header{text-align:center;padding:5rem 2rem;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?w=1400') center/cover no-repeat;border-radius:28px;color:white;margin-bottom:4rem;box-shadow:0 20px 50px rgba(0,0,0,0.25);}
-        h1{font-size:3.6rem;font-weight:900;margin-bottom:1rem;text-shadow:0 4px 20px rgba(0,0,0,0.6);}
-        .subtitle{font-size:1.6rem;max-width:950px;margin:0 auto 2rem;opacity:0.95;}
-        
-        .hero-btn{background:#27ae60;color:white;padding:1.6rem 4rem;font-size:1.6rem;border-radius:60px;text-decoration:none;display:inline-block;margin:1rem 0;font-weight:800;box-shadow:0 15px 40px rgba(39,174,96,0.5);transition:all .4s;position:relative;}
-        .hero-btn:hover{transform:translateY(-6px);background:#219a52;box-shadow:0 25px 50px rgba(39,174,96,0.6);}
-        
-        .section{background:white;border-radius:22px;padding:4rem;margin:3rem 0;box-shadow:0 15px 45px rgba(0,0,0,0.1);}
-        h2{color:#27ae60;text-align:center;font-size:2.6rem;margin-bottom:3.5rem;}
-        
-        /* BudgetDoktorn Special Card */
-        .doctor-section { background: #eef9f2; border: 3px solid #27ae60; position: relative; overflow: hidden; }
-        .doctor-badge { position: absolute; top: 20px; right: -30px; background: #27ae60; color: white; padding: 10px 40px; transform: rotate(45deg); font-weight: bold; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;}
-        .review-card{background:#f8fff9;border-left:8px solid #27ae60;padding:2.5rem;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.07);}
-        .conclusion{text-align:center;font-size:1.7rem;font-weight:800;color:#27ae60;margin-top:4rem;}
+  <title>Sömn, återhämtning och privatekonomi 2026 – min personliga guide</title>
 
-        .link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:2.5rem;}
-        .card{position:relative;background:white;padding:2.5rem;border-radius:20px;box-shadow:0 12px 35px rgba(0,0,0,0.1);transition:all .4s;border:1px solid #eee; display: flex; flex-direction: column; justify-content: space-between;}
-        .card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,0.18);}
-        .tag{position:absolute;top:1.4rem;right:1.4rem;background:#4a6cf7;color:white;padding:0.6rem 1.2rem;border-radius:30px;font-size:0.85rem;font-weight:700;}
-        .tag.new-tag{background:#e74c3c;}
-        .tag.doctor-tag{background:#27ae60;}
-        
-        .card h3{font-size:1.6rem;color:#2c3e50;margin-top:1rem; margin-bottom: 1rem;}
-        .card a{background:#4a6cf7;color:white;padding:1.3rem;border-radius:50px;text-align:center;display:block;font-weight:700;text-decoration:none;transition:all .3s;}
-        .card a:hover{background:#3a5ce5;}
+  <meta name="description" content="En personlig guide om sömn, återhämtning, vardagsbalans och bättre privatekonomi. Läs om resan bakom BudgetDoktorn och hur ekonomisk kontroll kan skapa mer trygghet i vardagen.">
 
-        footer{text-align:center;padding:6rem 1rem;background:#f9f9f9;border-radius:25px;margin-top:7rem;color:#666;}
-        
-        @media(max-width:768px){
-            h1{font-size:2.5rem;}
-            .subtitle{font-size:1.2rem;}
-            .section{padding:2rem;}
-            .link-grid{grid-template-columns:1fr;}
-        }
-    </style>
+  <meta property="og:title" content="Sömn, återhämtning och privatekonomi 2026">
+  <meta property="og:description" content="Från stress och sömnproblem till bättre rutiner, mer kontroll och starkare privatekonomi via BudgetDoktorn.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="sv_SE">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f8fafc 0%, #eef9f2 45%, #e8f5e8 100%);
+      color: #263238;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 5.5rem 2rem;
+      background:
+        linear-gradient(rgba(9, 33, 25, 0.72), rgba(9, 33, 25, 0.72)),
+        url('https://images.unsplash.com/photo-1516397281156-ca07cf9746fc?w=1600') center/cover no-repeat;
+      border-radius: 30px;
+      color: white;
+      margin-bottom: 4rem;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.24);
+      overflow: hidden;
+      position: relative;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -45% -20%;
+      height: 220px;
+      background: radial-gradient(circle, rgba(39,174,96,0.35), transparent 65%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 0.55rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-bottom: 1.3rem;
+      backdrop-filter: blur(4px);
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 6vw, 4.2rem);
+      font-weight: 950;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 4px 22px rgba(0,0,0,0.55);
+      line-height: 1.08;
+    }
+
+    .subtitle {
+      font-size: clamp(1.12rem, 2.5vw, 1.55rem);
+      max-width: 920px;
+      margin: 0 auto 2rem;
+      opacity: 0.96;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-btn,
+    .secondary-btn {
+      padding: 1.15rem 2.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 850;
+      transition: all .3s ease;
+    }
+
+    .hero-btn {
+      background: #27ae60;
+      color: white;
+      box-shadow: 0 14px 36px rgba(39,174,96,0.42);
+    }
+
+    .hero-btn:hover {
+      transform: translateY(-4px);
+      background: #219a52;
+      box-shadow: 0 22px 46px rgba(39,174,96,0.52);
+    }
+
+    .secondary-btn {
+      background: rgba(255,255,255,0.13);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.34);
+    }
+
+    .secondary-btn:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-4px);
+    }
+
+    .section {
+      background: white;
+      border-radius: 24px;
+      padding: clamp(2rem, 5vw, 4rem);
+      margin: 3rem 0;
+      box-shadow: 0 16px 46px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.85);
+    }
+
+    h2 {
+      color: #1f8f4d;
+      text-align: center;
+      font-size: clamp(1.85rem, 4vw, 2.75rem);
+      margin-bottom: 2rem;
+      line-height: 1.18;
+    }
+
+    h3 {
+      color: #20343f;
+      font-size: 1.38rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+    }
+
+    .lead {
+      font-size: 1.22rem;
+      max-width: 850px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      color: #455a64;
+    }
+
+    .note {
+      background: #f8fafc;
+      border-left: 6px solid #27ae60;
+      border-radius: 16px;
+      padding: 1.4rem;
+      margin: 2rem 0;
+      color: #334155;
+    }
+
+    .doctor-section {
+      background: linear-gradient(135deg, #eef9f2 0%, #ffffff 100%);
+      border: 3px solid #27ae60;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .doctor-badge {
+      position: absolute;
+      top: 26px;
+      right: -42px;
+      background: #27ae60;
+      color: white;
+      padding: 10px 54px;
+      transform: rotate(45deg);
+      font-weight: 900;
+      font-size: 0.9rem;
+      box-shadow: 0 10px 25px rgba(39,174,96,0.25);
+    }
+
+    .review-grid,
+    .three-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem;
+      margin: 2rem 0;
+    }
+
+    .review-card {
+      background: #f8fff9;
+      border-left: 7px solid #27ae60;
+      padding: 1.8rem;
+      border-radius: 18px;
+      box-shadow: 0 10px 28px rgba(15,23,42,0.06);
+    }
+
+    .finance-card {
+      background: #ffffff;
+      border: 1px solid #dcfce7;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 12px 34px rgba(15,23,42,0.07);
+    }
+
+    .finance-card strong {
+      color: #15803d;
+    }
+
+    .big-cta {
+      text-align: center;
+      background: linear-gradient(135deg, #0f5132 0%, #27ae60 100%);
+      color: white;
+      padding: 3rem 2rem;
+      border-radius: 24px;
+      margin: 3rem 0;
+      box-shadow: 0 20px 45px rgba(39,174,96,0.24);
+    }
+
+    .big-cta h2 {
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .big-cta p {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.15rem;
+    }
+
+    .white-btn {
+      background: white;
+      color: #166534;
+      padding: 1.15rem 2.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 900;
+      margin-top: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+      transition: all .3s ease;
+    }
+
+    .white-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+    }
+
+    .link-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.7rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      position: relative;
+      background: white;
+      padding: 2rem;
+      border-radius: 22px;
+      box-shadow: 0 12px 34px rgba(15,23,42,0.08);
+      transition: all .35s ease;
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 270px;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 48px rgba(15,23,42,0.14);
+    }
+
+    .tag {
+      display: inline-block;
+      width: fit-content;
+      background: #4a6cf7;
+      color: white;
+      padding: 0.48rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 850;
+      margin-bottom: 1rem;
+    }
+
+    .tag.green {
+      background: #27ae60;
+    }
+
+    .tag.orange {
+      background: #f97316;
+    }
+
+    .tag.red {
+      background: #dc2626;
+    }
+
+    .card a {
+      background: #2563eb;
+      color: white;
+      padding: 1rem 1.2rem;
+      border-radius: 999px;
+      text-align: center;
+      display: block;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all .3s ease;
+      margin-top: 1.3rem;
+    }
+
+    .card a:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .card a.green-link {
+      background: #27ae60;
+    }
+
+    .card a.green-link:hover {
+      background: #15803d;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 1.4rem 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: #f8fafc;
+      border-radius: 25px;
+      margin-top: 5rem;
+      color: #64748b;
+      border: 1px solid #e2e8f0;
+    }
+
+    .small {
+      font-size: 0.92rem;
+      color: #64748b;
+    }
+
+    @media(max-width:768px) {
+      header {
+        padding: 4rem 1.2rem;
+      }
+
+      .section {
+        padding: 2rem 1.2rem;
+      }
+
+      .doctor-badge {
+        display: none;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-btn,
+      .secondary-btn {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="container">
-    <header>
-        <h1>God Sömn & Stark Ekonomi</h1>
-        <p class="subtitle">Välkommen till min personliga samlingssida för 2026. Här delar jag resan från sömnlösa nätter till total ekonomisk kontroll.</p>
-        <div style="font-size: 2rem; margin-bottom: 2rem;">🌙 ⚖️ 💰</div>
-        <a href="#budgetdoktorn" class="hero-btn">Besök BudgetDoktorn →</a>
-    </header>
 
-    <div id="budgetdoktorn" class="section doctor-section">
-        <div class="doctor-badge">REKOMMENDERAS</div>
-        <h2>BudgetDoktorn: Din finansiella hälsa</h2>
-        <p style="font-size: 1.3rem; text-align: center; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-            Efter år av letande efter ärliga svar på nätet startade jag <strong>BudgetDoktorn.com</strong>. Det är här jag publicerar mina mest djupgående analyser för att hjälpa dig sänka dina räntekostnader och navigera de nya reglerna 2026.
+  <header>
+    <span class="eyebrow">Personlig guide 2026</span>
+    <h1>Sömn, återhämtning och privatekonomi</h1>
+    <p class="subtitle">
+      En personlig samlingssida om hur bättre rutiner, mindre stress och mer ekonomisk kontroll kan skapa ett lugnare liv.
+      Här samlar jag mina erfarenheter, mina viktigaste lärdomar och vägen vidare till BudgetDoktorn.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://budgetdoktorn.com/" class="hero-btn" target="_blank" rel="noopener">Besök BudgetDoktorn →</a>
+      <a href="#min-resa" class="secondary-btn">Läs min resa</a>
+    </div>
+  </header>
+
+  <section id="min-resa" class="section">
+    <h2>Min resa: från stress till mer kontroll</h2>
+
+    <p class="lead">
+      Den här sidan började som en enkel personlig samlingssida. Först handlade den mycket om sömn, återhämtning och produkter jag själv var nyfiken på. Med tiden blev det tydligare att mycket i livet hänger ihop: stress, sömn, pengar, trygghet och vardagsbeslut.
+    </p>
+
+    <p>
+      När ekonomin känns rörig påverkar det ofta mer än bara bankkontot. Man kan börja skjuta upp beslut, tappa energi, sova sämre och känna att man aldrig riktigt kommer ikapp. Samtidigt kan små förbättringar ge stor effekt. En tydligare budget, lägre fasta kostnader, bättre koll på lån, smartare sparande och färre onödiga avgifter kan skapa mer lugn i hela vardagen.
+    </p>
+
+    <p>
+      Det var den insikten som till slut ledde vidare till <strong>BudgetDoktorn</strong>. Jag ville skapa en svensk ekonomisida som inte bara radar upp banker, lån och tjänster, utan som faktiskt hjälper vanliga människor att förstå sina val. Privatekonomi ska inte kännas som ett främmande språk. Det ska vara tydligt, konkret och användbart.
+    </p>
+
+    <div class="note">
+      <strong>Min grundtanke:</strong> bättre ekonomi handlar inte bara om att tjäna mer pengar. Det handlar också om att minska ekonomisk stress, fatta tryggare beslut och bygga ett system som gör vardagen lättare.
+    </div>
+  </section>
+
+  <section id="budgetdoktorn" class="section doctor-section">
+    <div class="doctor-badge">REKOMMENDERAS</div>
+
+    <h2>BudgetDoktorn – ekonomisk hälsa för vanliga svenskar</h2>
+
+    <p class="lead">
+      <a href="https://budgetdoktorn.com/" target="_blank" rel="noopener" style="color:#15803d; font-weight:900;">
+        BudgetDoktorn.com
+      </a>
+      är mitt större projekt inom privatekonomi. Där publicerar jag guider, jämförelser och omdömen som hjälper läsare att spara pengar, jämföra alternativ och undvika onödiga ekonomiska misstag.
+    </p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <h3>Guider för bättre kontroll</h3>
+        <p>
+          På BudgetDoktorn finns guider om budget, sparande, skulder, ränta, elavtal, försäkringar och vardagskostnader. Målet är att göra ekonomi begripligt även för den som inte är expert.
         </p>
-        <div class="review-grid">
-            <div class="review-card">
-                <h3>Oberoende Analyser</h3>
-                <p>Vi granskar bankernas tillränta och dolda avgifter så att du slipper obehagliga överraskningar.</p>
-            </div>
-            <div class="review-card">
-                <h3>Bästa Privatlånen 2026</h3>
-                <p>En komplett genomgång av vilka långivare som faktiskt håller måttet när marknaden svänger.</p>
-            </div>
-            <div class="review-card">
-                <h3>Skydda din UC</h3>
-                <p>Lär dig hur du använder Creditsafe och Bisnode strategiskt för att behålla ett perfekt kreditbetyg.</p>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="https://budgetdoktorn.com/" target="_blank" class="hero-btn" style="background: #27ae60;">Gå till BudgetDoktorn.com här →</a>
-        </div>
+      </div>
+
+      <div class="review-card">
+        <h3>Jämförelser och omdömen</h3>
+        <p>
+          Sidan granskar banker, låneförmedlare, kreditkort, sparkonton, försäkringar, matkassar, elbolag och digitala ekonomitjänster. Fokus ligger på tydlighet, risker och praktisk nytta.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Ekonomiska beslut i vardagen</h3>
+        <p>
+          BudgetDoktorn handlar inte bara om stora beslut. Det handlar även om de små valen: abonnemang, matkostnader, försäkringar, räntor, appar och tjänster som påverkar plånboken varje månad.
+        </p>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>Recension: Hur jag slutade vakna på nätterna</h2>
-        <p class="subtitle" style="text-align: center; color: #555;">Från 4 uppvaknanden per natt → sover hela natten på bara 18 dagar med svensk CBD-olja.</p>
-        <div class="review-grid">
-            <div class="review-card">
-                <h3>Vecka 1</h3>
-                <p>Mindre ångest vid läggdags. Insomningen går från 60 minuter till ca 15 minuter.</p>
-            </div>
-            <div class="review-card">
-                <h3>Vecka 2</h3>
-                <p>Vaknar bara 1 gång per natt istället för 4. Drömmer tydligare och känner mig mer utvilad.</p>
-            </div>
-            <div class="review-card">
-                <h3>Vecka 3</h3>
-                <p>Sover rakt igenom. Vaknar pigg utan klocka. Den mentala dimman är helt borta.</p>
-            </div>
-        </div>
-        <p class="conclusion">Resultat: CBD blev pusselbiten som saknades för min återhämtning.</p>
+    <div class="big-cta">
+      <h2>Vill du få bättre koll på din ekonomi?</h2>
+      <p>
+        Börja med BudgetDoktorns startsida och gå vidare till de guider som passar din situation bäst. Där hittar du praktiska steg, jämförelser och tydliga förklaringar.
+      </p>
+      <a href="https://budgetdoktorn.com/" target="_blank" rel="noopener" class="white-btn">
+        Gå till BudgetDoktorn.com →
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Varför ekonomi påverkar både sömn och vardagslugn</h2>
+
+    <p>
+      Pengar är inte allt, men ekonomisk stress kan påverka nästan allt. Om räkningar ligger och väntar, om räntor känns otydliga eller om man inte vet vart pengarna tar vägen varje månad, blir det svårt att koppla av helt. Därför ser jag privatekonomi som en form av vardagshälsa.
+    </p>
+
+    <p>
+      Det betyder inte att alla måste bli investerare, företagare eller ekonomiexperter. Tvärtom. För de flesta börjar det med några grundläggande saker: veta vad som kommer in, veta vad som går ut, minska onödiga kostnader och bygga en buffert som gör att oväntade utgifter inte blir panik.
+    </p>
+
+    <div class="three-grid">
+      <div class="finance-card">
+        <h3>1. Koll på budgeten</h3>
+        <p>
+          En budget är inte ett straff. Det är en karta. När du ser helheten blir det lättare att prioritera och ta bort sådant som inte längre ger värde.
+        </p>
+        <p>
+          Läs mer hos BudgetDoktorn:
+          <a href="https://budgetdoktorn.com/skapa-budget/" target="_blank" rel="noopener" style="color:#15803d; font-weight:800;">skapa budget</a>.
+        </p>
+      </div>
+
+      <div class="finance-card">
+        <h3>2. Buffert före stress</h3>
+        <p>
+          En buffert gör att bilen, tandläkaren, elräkningen eller en oväntad kostnad inte behöver bli en ekonomisk kris.
+        </p>
+        <p>
+          Börja här:
+          <a href="https://budgetdoktorn.com/borja-spara/" target="_blank" rel="noopener" style="color:#15803d; font-weight:800;">börja spara</a>.
+        </p>
+      </div>
+
+      <div class="finance-card">
+        <h3>3. Jämför innan du väljer</h3>
+        <p>
+          Många betalar för mycket för lån, el, försäkringar, kreditkort eller abonnemang bara för att de aldrig jämför alternativen.
+        </p>
+        <p>
+          Se exempel:
+          <a href="https://budgetdoktorn.com/basta-privatlanet/" target="_blank" rel="noopener" style="color:#15803d; font-weight:800;">bästa privatlånet</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Sömn, återhämtning och rutiner</h2>
+
+    <p class="lead">
+      Min gamla sida handlade mycket om sömn och återhämtning. Den delen vill jag behålla, men på ett mer balanserat sätt. Sömn är personligt, och det som fungerar för en person fungerar inte alltid för en annan.
+    </p>
+
+    <p>
+      För mig blev sömn en signal. När jag sov dåligt var det ofta inte bara “sömnen” som var problemet. Det kunde handla om stress, sena skärmar, otydliga rutiner, oro, ekonomi eller att jag inte gav kroppen någon tydlig chans att varva ner.
+    </p>
+
+    <p>
+      Jag har testat olika saker genom åren: kvällsrutiner, mindre koffein, mer regelbundna tider, lugnare kvällar, bättre planering och olika produkter inom hälsa och återhämtning. Poängen är inte att säga att en viss metod passar alla. Poängen är att bygga ett system där kroppen får bättre förutsättningar.
+    </p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <h3>Vecka 1: skapa lugnare kvällar</h3>
+        <p>
+          Första steget var att minska friktionen inför läggdags. Mindre scrollande, färre sena beslut och en tydligare kvällsrutin gjorde större skillnad än jag först trodde.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Vecka 2: minska mental belastning</h3>
+        <p>
+          När jag började skriva ner saker tidigare på kvällen slapp hjärnan försöka lösa allt precis när jag skulle sova. Det gav mer lugn.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Vecka 3: koppla ihop vardag och ekonomi</h3>
+        <p>
+          Ekonomisk oreda skapar lätt bakgrundsstress. När jag fick bättre kontroll på pengar, räkningar och prioriteringar blev det också lättare att vila.
+        </p>
+      </div>
     </div>
 
-    <div class="other-links">
-        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem;">Fler smarta resurser</h2>
-        <div class="link-grid">
-            <div class="card">
-                <span class="tag">HÄLSA</span>
-                <h3>CBDbuds.se</h3>
-                <p>Premium CBD-blommor och oljor. Laboratorietestade produkter med snabb leverans inom Sverige.</p>
-                <a href="https://cbdbuds.se/?utm_source=addrevenue.io&utm_medium=affiliate&utm_campaign=addrevenue.io&utm_content=Passiv_Inkomst" target="_blank">Se utbudet här →</a>
-            </div>
+    <div class="note">
+      <strong>Viktigt:</strong> Innehållet här är personliga erfarenheter och ska inte ses som medicinsk rådgivning. Vid långvariga sömnproblem, oro eller hälsobesvär bör man kontakta vården.
+    </div>
+  </section>
 
-            <div class="card">
-                <span class="tag">BÄST I TEST</span>
-                <h3>Natural Hemp Life</h3>
-                <p>Den olja jag personligen använder för min sömn. Marknadens renaste alternativ enligt min granskning.</p>
-                <a href="https://www.naturalhemplife.se/?utm_source=addrevenue.io&utm_medium=affiliate&utm_campaign=addrevenue.io&utm_content=Passiv_Inkomst" target="_blank">Köp med rabattlänk →</a>
-            </div>
+  <section class="section">
+    <h2>CBD, hälsa och personliga erfarenheter</h2>
 
-            <div class="card">
-                <span class="tag new-tag">INVESTERING</span>
-                <h3>Tessin Fastigheter</h3>
-                <p>Investera i svenska fastighetsprojekt. Ett bra sätt att diversifiera sin portfölj utanför börsen.</p>
-                <a href="https://addrevenue.io/l/4242920" target="_blank">Investera med Tessin →</a>
-            </div>
-        </div>
+    <p>
+      Den gamla versionen av sidan innehöll en tydligare CBD-recension. Jag vill behålla ämnet eftersom det var en del av sidans historia, men jag vill samtidigt vara mer försiktig och saklig. Produkter inom hälsa, kosttillskott och återhämtning bör alltid hanteras med eftertanke.
+    </p>
+
+    <p>
+      Min syn idag är enkel: det är bättre att prata om rutiner, återhämtning och helhet än att påstå att en enskild produkt löser allt. Sömn påverkas av många saker. Stress, ekonomi, skärmtid, kost, alkohol, koffein, motion, oro och livssituation kan alla spela in.
+    </p>
+
+    <p>
+      Om man väljer att läsa på om CBD eller liknande produkter bör man vara noggrann. Kontrollera alltid vad som gäller, välj seriösa aktörer, läs innehåll och villkor, och undvik att se någon produkt som en snabb lösning på större problem.
+    </p>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <h3>Min lärdom</h3>
+        <p>
+          Det viktigaste för mig var inte en enskild produkt, utan att börja ta återhämtning på allvar. När rutinerna blev bättre blev vardagen också stabilare.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Var försiktig med löften</h3>
+        <p>
+          Stora hälsolöften på nätet bör alltid granskas kritiskt. Seriöst innehåll ska vara tydligt med begränsningar och inte lova mirakel.
+        </p>
+      </div>
+
+      <div class="review-card">
+        <h3>Helheten först</h3>
+        <p>
+          Sömn, ekonomi, rörelse, mat, relationer och stress hänger ihop. Därför tror jag mer på system än på snabba genvägar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>BudgetDoktorns bästa guider att börja med</h2>
+
+    <p class="lead">
+      Om du kom hit för att få mer lugn i vardagen är privatekonomin ett bra ställe att börja. Här är några av de viktigaste guiderna på BudgetDoktorn.
+    </p>
+
+    <div class="link-grid">
+      <div class="card">
+        <span class="tag green">Budget</span>
+        <h3>Skapa en budget</h3>
+        <p>
+          En praktisk startpunkt för dig som vill se vart pengarna tar vägen och få bättre kontroll varje månad.
+        </p>
+        <a class="green-link" href="https://budgetdoktorn.com/skapa-budget/" target="_blank" rel="noopener">Läs guiden →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag green">Sparande</span>
+        <h3>Börja spara</h3>
+        <p>
+          En guide för dig som vill komma igång med buffert, månadssparande och långsiktiga ekonomiska vanor.
+        </p>
+        <a class="green-link" href="https://budgetdoktorn.com/borja-spara/" target="_blank" rel="noopener">Börja här →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag orange">Lån</span>
+        <h3>Bästa privatlånet</h3>
+        <p>
+          En jämförelsesida för dig som vill förstå privatlån, räntor, villkor och vad du bör tänka på innan du ansöker.
+        </p>
+        <a href="https://budgetdoktorn.com/basta-privatlanet/" target="_blank" rel="noopener">Jämför privatlån →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag green">Elavtal</span>
+        <h3>Jämför elavtal</h3>
+        <p>
+          Elkostnaden är en av de där vardagsutgifterna som många glömmer att se över. Här får du hjälp att tänka smartare.
+        </p>
+        <a class="green-link" href="https://budgetdoktorn.com/jamfor-elavtal/" target="_blank" rel="noopener">Jämför elavtal →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag green">Försäkring</span>
+        <h3>Bästa försäkringarna 2026</h3>
+        <p>
+          Försäkringar kan skapa trygghet, men bara om de faktiskt passar din situation och inte kostar mer än nödvändigt.
+        </p>
+        <a class="green-link" href="https://budgetdoktorn.com/basta-forsakringarna-2026/" target="_blank" rel="noopener">Se guiden →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag green">Matkostnad</span>
+        <h3>Bästa matkassen 2026</h3>
+        <p>
+          Mat är en stor vardagskostnad. Rätt matkasse kan ibland spara tid, minska matsvinn och göra planeringen enklare.
+        </p>
+        <a class="green-link" href="https://budgetdoktorn.com/basta-matkassen-2026/" target="_blank" rel="noopener">Läs jämförelsen →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Fler resurser och äldre länkar</h2>
+
+    <p class="lead">
+      Den här sidan har tidigare även samlat externa resurser inom hälsa, investeringar och alternativa produkter. Jag behåller den delen, men separerar den tydligare från BudgetDoktorn.
+    </p>
+
+    <div class="link-grid">
+      <div class="card">
+        <span class="tag">Hälsa</span>
+        <h3>CBDbuds.se</h3>
+        <p>
+          En extern aktör inom CBD-relaterade produkter. Läs alltid innehåll, villkor och aktuell information innan du köper något.
+        </p>
+        <a href="https://cbdbuds.se/?utm_source=addrevenue.io&utm_medium=affiliate&utm_campaign=addrevenue.io&utm_content=Passiv_Inkomst" target="_blank" rel="nofollow sponsored noopener">Besök sidan →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag">Hälsa</span>
+        <h3>Natural Hemp Life</h3>
+        <p>
+          En extern sida inom hamparelaterade produkter. Se detta som en resurs att läsa vidare på, inte som medicinsk rådgivning.
+        </p>
+        <a href="https://www.naturalhemplife.se/?utm_source=addrevenue.io&utm_medium=affiliate&utm_campaign=addrevenue.io&utm_content=Passiv_Inkomst" target="_blank" rel="nofollow sponsored noopener">Läs mer →</a>
+      </div>
+
+      <div class="card">
+        <span class="tag red">Investering</span>
+        <h3>Tessin Fastigheter</h3>
+        <p>
+          En extern investeringstjänst inom fastighetsprojekt. Investeringar innebär risk, så läs alltid villkor och riskinformation noggrant.
+        </p>
+        <a href="https://addrevenue.io/l/4242920" target="_blank" rel="nofollow sponsored noopener">Se Tessin →</a>
+      </div>
     </div>
 
-    <footer>
-        <p>© 2026 Passiv Inkomst & BudgetDoktorn – Alla rättigheter förbehållna</p>
-        <p style="margin-top: 1rem; font-size: 0.9rem;">Informationen på denna sida är personliga erfarenheter. Affiliate-länkar används för att stödja driften av sajterna. Tack för ditt förtroende!</p>
-    </footer>
+    <div class="note">
+      <strong>Transparens:</strong> Vissa externa länkar på den här sidan kan vara affiliatelänkar. Länkarna till BudgetDoktorn är däremot främst rekommendationer till mina egna guider och resurser inom privatekonomi.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Vanliga frågor</h2>
+
+    <div class="faq-item">
+      <h3>Varför länkar den här sidan till BudgetDoktorn?</h3>
+      <p>
+        BudgetDoktorn är mitt större projekt inom privatekonomi. Eftersom den här sidan handlar om vardagsbalans, stress, rutiner och ekonomisk kontroll är det naturligt att länka vidare till BudgetDoktorns guider.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Är BudgetDoktorn en bank eller långivare?</h3>
+      <p>
+        Nej. BudgetDoktorn är en svensk ekonomisajt med guider, jämförelser och omdömen. Sidan hjälper läsare att förstå alternativ, men ersätter inte personlig ekonomisk rådgivning.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Ger den här sidan medicinska råd?</h3>
+      <p>
+        Nej. Innehållet om sömn och återhämtning bygger på personliga erfarenheter och allmänna resonemang. Vid hälsoproblem bör du kontakta vården.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Var börjar jag om min ekonomi känns rörig?</h3>
+      <p>
+        Börja med att skriva ner inkomster, fasta kostnader, skulder och sparande. Därefter kan du läsa BudgetDoktorns guider om budget, sparande och att minska onödiga kostnader.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>© 2026 – Personlig samlingssida & BudgetDoktorn</strong></p>
+    <p class="small">
+      Informationen på denna sida bygger på personliga erfarenheter och allmänna resonemang. Den ska inte ses som medicinsk, juridisk eller personlig ekonomisk rådgivning.
+    </p>
+    <p class="small">
+      Besök gärna <a href="https://budgetdoktorn.com/" target="_blank" rel="noopener" style="color:#15803d; font-weight:800;">BudgetDoktorn.com</a> för fler guider om privatekonomi, sparande, lån, försäkringar och smartare vardagsbeslut.
+    </p>
+  </footer>
+
 </div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Sömn, återhämtning och privatekonomi 2026",
+  "description": "En personlig guide om sömn, återhämtning, vardagsbalans och bättre privatekonomi med länkar till BudgetDoktorn.",
+  "inLanguage": "sv-SE",
+  "about": [
+    "Privatekonomi",
+    "Sömn",
+    "Återhämtning",
+    "Budget",
+    "Sparande"
+  ],
+  "mentions": {
+    "@type": "Organization",
+    "name": "BudgetDoktorn",
+    "url": "https://budgetdoktorn.com/"
+  },
+  "mainEntity": {
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Varför länkar den här sidan till BudgetDoktorn?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "BudgetDoktorn är ett större projekt inom privatekonomi. Eftersom sidan handlar om vardagsbalans, stress, rutiner och ekonomisk kontroll är det naturligt att länka vidare till BudgetDoktorns guider."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Är BudgetDoktorn en bank eller långivare?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. BudgetDoktorn är en svensk ekonomisajt med guider, jämförelser och omdömen. Sidan hjälper läsare att förstå alternativ, men ersätter inte personlig ekonomisk rådgivning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ger den här sidan medicinska råd?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nej. Innehållet om sömn och återhämtning bygger på personliga erfarenheter och allmänna resonemang. Vid hälsoproblem bör man kontakta vården."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Var börjar jag om min ekonomi känns rörig?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Börja med att skriva ner inkomster, fasta kostnader, skulder och sparande. Därefter kan du läsa BudgetDoktorns guider om budget, sparande och att minska onödiga kostnader."
+        }
+      }
+    ]
+  }
+}
+</script>
 
 </body>
 </html>
